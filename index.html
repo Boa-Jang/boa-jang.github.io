@@ -157,7 +157,20 @@
   </footer>
 
   <script>
+    // Set current year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggleBtn && toggleBtn.addEventListener('click', () => menu.classList.toggle('open'));
+
+    // Add shadow when scrolled
+    const topbar = document.querySelector('.topbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 4) topbar.classList.add('scrolled');
+      else topbar.classList.remove('scrolled');
+    });
   </script>
 </body>
 </html>
