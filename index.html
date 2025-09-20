@@ -18,16 +18,23 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    header { text-align: center; padding: 32px 16px 20px; border-bottom: 1px solid var(--border); }
+    /* Sticky topbar */
+    .topbar { position: sticky; top: 0; z-index: 999; background: #fff; border-bottom: 1px solid var(--border); }
+    .topbar .container { max-width: 1100px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 700; font-size: 16px; }
+    .menu { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .menu a { background: transparent; padding: 0; border-radius: 0; font-size: 13px; color: var(--fg); }
+    .menu a:hover { text-decoration: underline; }
+    .right { display: flex; align-items: center; gap: 14px; }
+    .right .icon { font-size: 16px; color: var(--muted); }
+
+    header { text-align: center; padding: 28px 16px 16px; border-bottom: 1px solid var(--border); }
     .avatar { width: 90px; height: 90px; border-radius: 9999px; object-fit: cover; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,.08); display: block; margin: 0 auto 10px; }
     h1 { font-size: 22px; margin: 4px 0 2px; }
     .subtitle { color: var(--muted); margin: 0; font-size: 13px; }
 
     .links { margin-top: 8px; font-size: 12px; }
     .links a { margin: 0 4px; background: var(--chip); padding: 3px 6px; border-radius: 6px; }
-
-    .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .nav a { background: var(--chip); padding: 4px 6px; border-radius: 10px; font-size: 12px; white-space: nowrap; }
 
     main { max-width: 980px; margin: 0 auto; padding: 20px 12px 50px; }
     section { padding: 18px 0; border-bottom: 1px solid var(--border); }
@@ -46,23 +53,31 @@
   </style>
 </head>
 <body>
+  <!-- Sticky navigation bar -->
+  <nav class="topbar">
+    <div class="container">
+      <div class="brand">Boa Jang</div>
+      <div class="menu">
+        <a href="#about">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards & Honors</a>
+        <a href="#presentations">Activities</a>
+        <a href="#teaching">Invited Talk</a>
+      </div>
+      <div class="right">
+        <span class="icon">🔍</span>
+      </div>
+    </div>
+  </nav>
+
   <header>
     <img class="avatar" src="Headshot_Boa Jang.jpg" alt="Profile photo of Boa Jang" />
     <h1>Boa Jang</h1>
     <p class="subtitle">Bioengineering Ph.D. Student · AI in Medical Imaging</p>
     <div class="links">
-      <a href="CV_Boa Jang.pdf" target="_blank">📄 CV (PDF)</a>
+      <a href="CV_Boa Jang.pdf" target="_blank">📄 CV</a>
       <a href="https://scholar.google.com/citations?user=BOqi4TAAAAAJ&hl" target="_blank">🔗 Google Scholar</a>
       <a href="https://github.com/Jang-Boa" target="_blank">💻 GitHub</a>
-    </div>
-    <div class="nav">
-      <a href="#about">About</a>
-      <a href="#contact-education">Contact & Education</a>
-      <a href="#publications">Publications</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#awards">Honors & Awards</a>
-      <a href="#certifications">Certifications & Patents</a>
-      <a href="#teaching">Teaching</a>
     </div>
   </header>
 
@@ -91,15 +106,15 @@
         <div>
           <div class="kicker">Education</div>
           <h2>Education</h2>
-          <p><strong>Seoul National University, Republic of Korea</strong><br/>
+          <p> <strong>Seoul National University, Republic of Korea</strong><br/>
             <span class="muted">Ph.D. Student in Bioengineering, 2023</span></p>
-          <p><strong>Peking University, Beijing, China</strong><br/>
+          <p> <strong>Peking University, Beijing, China</strong><br/>
             <span class="muted">B.S. in Psychological & Cognitive Sciences, 2020</span></p>
         </div>
       </div>
     </section>
 
-  <section id="publications">
+    <section id="publications">
       <div class="kicker">Research</div>
       <h2>Publications</h2>
       <ol>
@@ -165,7 +180,6 @@
         <li>NVIDIA HCLS Summit Korea — MONAI Bootcamp TA — May 3, 2022</li>
       </ul>
     </section>
-    <!-- Other sections remain unchanged -->
   </main>
 
   <footer>
