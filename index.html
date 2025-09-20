@@ -42,7 +42,21 @@
     @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
     .muted { color: var(--muted); font-size: 13px; }
 
-    footer { text-align: center; font-size: 12px; color: var(--muted); padding: 16px; border-top: 1px solid var(--border); }
+    footer { text-align: center; font-size: 14px; color: var(--muted); padding: 24px; border-top: 1px solid var(--border); }
+    /* Sticky Topbar */
+    .topbar { position: sticky; top: 0; z-index: 999; backdrop-filter: saturate(180%) blur(8px); background: rgba(255,255,255,.9); border-bottom: 1px solid var(--border); }
+    .topbar .container { max-width: 980px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { font-weight: 700; }
+    .menu { display: flex; gap: 12px; flex-wrap: wrap; }
+    .menu a { background: var(--chip); padding: 6px 10px; border-radius: 9999px; font-size: 14px; }
+    .hamburger { display: none; border: 1px solid var(--border); background: var(--chip); padding: 6px 10px; border-radius: 8px; font-size: 16px; }
+    .topbar.scrolled { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+    @media (max-width: 680px) {
+      .menu { display: none; width: 100%; padding-top: 8px; }
+      .menu.open { display: flex; }
+      .hamburger { display: block; }
+      .topbar .container { flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
