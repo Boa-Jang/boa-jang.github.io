@@ -42,51 +42,28 @@
     @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
     .muted { color: var(--muted); font-size: 13px; }
 
-    footer { text-align: center; font-size: 14px; color: var(--muted); padding: 24px; border-top: 1px solid var(--border); }
-    /* Sticky Topbar */
-    .topbar { position: sticky; top: 0; z-index: 999; backdrop-filter: saturate(180%) blur(8px); background: rgba(255,255,255,.9); border-bottom: 1px solid var(--border); }
-    .topbar .container { max-width: 980px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand { font-weight: 700; }
-    .menu { display: flex; gap: 12px; flex-wrap: wrap; }
-    .menu a { background: var(--chip); padding: 6px 10px; border-radius: 9999px; font-size: 14px; }
-    .hamburger { display: none; border: 1px solid var(--border); background: var(--chip); padding: 6px 10px; border-radius: 8px; font-size: 16px; }
-    .topbar.scrolled { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
-    @media (max-width: 680px) {
-      .menu { display: none; width: 100%; padding-top: 8px; }
-      .menu.open { display: flex; }
-      .hamburger { display: block; }
-      .topbar .container { flex-wrap: wrap; }
-    }
+    footer { text-align: center; font-size: 12px; color: var(--muted); padding: 16px; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
-  <!-- Sticky top navigation -->
-  <nav class="topbar">
-    <div class="container">
-      <div class="brand">Boa Jang</div>
-      <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</button>
-      <div id="menu" class="menu">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#presentations">Presentations</a>
-        <a href="#awards">Honors & Awards</a>
-        <a href="#certifications">Certifications & Patents</a>
-        <a href="#teaching">Teaching</a>
-      </div>
-    </div>
-  </nav>
   <header>
     <img class="avatar" src="Headshot_Boa Jang.jpg" alt="Profile photo of Boa Jang" />
     <h1>Boa Jang</h1>
     <p class="subtitle">Bioengineering Ph.D. Student · AI in Medical Imaging</p>
     <div class="links">
-      <a href="CV_Boa Jang_250919.docx" target="_blank">📄 CV (PDF)</a>
-      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">🔗 Google Scholar</a>
+      <a href="CV_Boa Jang.pdf" target="_blank">📄 CV (PDF)</a>
+      <a href="https://scholar.google.com/citations?user=BOqi4TAAAAAJ&hl" target="_blank">🔗 Google Scholar</a>
       <a href="https://github.com/Jang-Boa" target="_blank">💻 GitHub</a>
     </div>
-    <!-- navigation moved to sticky topbar above -->
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#contact-education">Contact & Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#awards">Honors & Awards</a>
+      <a href="#certifications">Certifications & Patents</a>
+      <a href="#teaching">Teaching</a>
+    </div>
   </header>
 
   <main>
@@ -179,20 +156,7 @@
   </footer>
 
   <script>
-    // Set current year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const toggleBtn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    toggleBtn && toggleBtn.addEventListener('click', () => menu.classList.toggle('open'));
-
-    // Add shadow when scrolled
-    const topbar = document.querySelector('.topbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 4) topbar.classList.add('scrolled');
-      else topbar.classList.remove('scrolled');
-    });
   </script>
 </body>
 </html>
