@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boa Jang | Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2937; /* slate-800 */
+      --muted: #6b7280; /* slate-500 */
+      --accent: #111827; /* gray-900 */
+      --border: #e5e7eb; /* gray-200 */
+      --chip: #f3f4f6; /* gray-100 */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.65; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    header { text-align: center; padding: 56px 16px 32px; border-bottom: 1px solid var(--border); }
+    .avatar { width: 120px; height: 120px; border-radius: 9999px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 6px 24px rgba(0,0,0,.08); display: block; margin: 0 auto 16px; }
+    h1 { font-size: clamp(28px, 5vw, 36px); margin: 8px 0 4px; }
+    .subtitle { color: var(--muted); margin: 0; }
+
+    /* Nav */
+    .nav { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    .nav a { background: var(--chip); padding: 8px 12px; border-radius: 9999px; font-size: 14px; }
+
+    /* Main layout */
+    main { max-width: 980px; margin: 0 auto; padding: 32px 16px 72px; }
+    section { padding: 24px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: 0; }
+    h2 { font-size: 22px; margin: 0 0 12px; }
+    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+    /* Lists */
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 6px 0; }
+
+    /* Two-column timeline (for education/experience) */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border: 1px solid var(--border); border-radius: 16px; padding: 16px; background: #fff; }
+    .muted { color: var(--muted); }
+
+    /* Footer */
+    footer { text-align: center; font-size: 14px; color: var(--muted); padding: 24px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Replace profile.jpg with your image file (keep the same file name or update src) -->
+    <img class="avatar" src="Headshot_Boa Jang.jpg" alt="Profile photo of Boa Jang" />
+    <h1>Boa Jang</h1>
+    <p class="subtitle">Bioengineering Ph.D. Student · AI in Medical Imaging</p>
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#awards">Honors & Awards</a>
+      <a href="#certifications">Certifications & Patents</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="kicker">About</div>
+      <h2>Professional Profile</h2>
+      <p>
+        Highly motivated and results-driven bioengineering Ph.D. student passionate about the intersection of 
+        cutting-edge technology and healthcare. I focus on artificial intelligence for medical images to improve 
+        diagnostics and patient outcomes with clinically impactful, real-world solutions.
+      </p>
+    </section>
+
+    <section id="education">
+      <div class="kicker">Education</div>
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Seoul National University</strong> — Ph.D. Student<br/>
+          <span class="muted">Interdisciplinary Program in Bioengineering · Mar 2023 – Present · Seoul, Korea</span><br/>
+        </div>
+        <div class="card">
+          <strong>Peking University</strong> — B.S., School of Psychological and Cognitive Sciences<br/>
+          <span class="muted">Sep 2016 – Jul 2020 · Beijing, China</span>
+          <ul>
+            <li>Academic Achievement Scholarship (2018 – 2019)</li>
+            <li>Thesis: “Effects of Post‑Encoding Intention on Memory Consolidation of Different Stimulus Types”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="kicker">Research</div>
+      <h2>Publications</h2>
+      <ol>
+        <li>
+          <strong>Kim, N.Y.*; Jang, B.*;</strong> Kim, Y.-G. (2023). Differential Diagnosis of Pleural Effusion using Machine Learning. 
+          <em>Annals of the American Thoracic Society</em>.
+        </li>
+        <li>
+          <strong>Jang, B.*;</strong> …; Kim, Y.-G. (2023). Preliminary analysis of predicting the first recurrence in patients with 
+          neovascular age‑related macular degeneration using deep learning. <em>BMC Ophthalmology</em>.
+        </li>
+      </ol>
+      <p class="muted">(* equal contribution)</p>
+    </section>
+
+    <section id="presentations">
+      <div class="kicker">Talks</div>
+      <h2>Conference Presentations</h2>
+      <ul>
+        <li><strong>Oral</strong> — Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability. MICCAI AMAI 2025, Dajeon, Korea.</li>
+        <li><strong>Oral</strong> — Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability. KOSMI Spring 2025, Busan, Korea. <em>Best Paper Award</em>.</li>
+        <li><strong>Oral</strong> — Self‑Supervised Learning for Mesangial Proliferation Prediction in Digital Pathology. KSN 2025, Coex, Seoul, Korea.</li>
+        <li><strong>Oral</strong> — Foundation Models in Healthcare: Development, Necessity and Implementation Strategies. HIMSS 2025, Las Vegas, NV.</li>
+        <li><strong>Oral</strong> — The Impact of AI‑Assistance on Predicting Recurrence in Neovascular AMD for Ophthalmologists. KOSMI Fall 2023, Bundang, Korea. <em>Best Paper Award</em>.</li>
+        <li><strong>Poster</strong> — Development and Validation of Pretrained Model for Fundoscopy‑Specific using Large‑Scale Images. OMIA‑X @ MICCAI 2023, Vancouver, Canada.</li>
+        <li><strong>Poster</strong> — Predicting the First Recurrence in Patients with Neovascular AMD Using Deep Learning. ASRS 2023, Seattle, USA. <em>Poster Award Winner</em>.</li>
+        <li><strong>Oral</strong> — Development and Validation of Pretrained Model for Fundoscopy‑Specific using Large‑Scale Images. KOSMI Spring 2023, Daegu, Korea. <em>Best Paper Award</em>.</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <div class="kicker">Recognition</div>
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>KOSMI Spring Conference Best Paper Award — Jun 2025</li>
+        <li>HeLP Challenge 2023 — Theme 6, 2nd Place — Dec 2023</li>
+        <li>HeLP Challenge 2023 — Theme 4, 2nd Place — Dec 2023</li>
+        <li>KOSMI Autumn Conference Best Paper Award — Nov 2023</li>
+        <li>Digital Pathology AI Hackathon (CODiPAI) — 3rd Place — Oct 2023</li>
+        <li>ASRS Poster Award Winner — Jul 2023</li>
+        <li>KOSMI Spring Conference Best Paper Award — Jun 2023</li>
+        <li>SNUAIMED Excellence Scholarship — Aug 2023</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <div class="kicker">Credentials</div>
+      <h2>Certifications & Patents</h2>
+      <ul>
+        <li>NVIDIA DLI Instructor‑Led Workshop: Fundamentals of Deep Learning — Aug 2023</li>
+        <li>Patent (KR): Method and system for predicting information related to abdominal surgery from medical imaging data. <!-- Translated title from Korean. --></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <div class="kicker">Teaching & Student Ambassadors </div>
+      <h2>Teaching Experience</h2>
+      <ul>
+        <li>KCD 2025 — Oct 16–18, 2025</li>
+        <li>MICCAI AMAI 2025 — Sep 23, 2025</li>
+        <li>Healthcare AI Research Training Program — Teaching Assistant — Feb 26 – May 28, 2025</li>
+        <li>AI Healthcare Training Program — Oct 12, 2024</li>
+        <li>NVIDIA HCLS Summit Korea — MONAI Bootcamp TA — May 3, 2022</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <div class="kicker">Say hello</div>
+      <h2>Contact</h2>
+      <p><strong>Seoul National University</strong> · Interdisciplinary Program in Bioengineering · Seoul, South Korea</p>
+      <ul>
+        <li>Email: <a href="mailto:boajang97@gmail.com">boajang97@gmail.com</a>; <a href="mailto:balinda@snu.ac.kr">balinda@snu.ac.kr</a></li>
+        <li>GitHub: <a href="https://github.com/Jang-Boa" target="_blank" rel="noreferrer">github.com/Jang-Boa</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/boa-jang-93a72918a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">linkedin.com/in/boa-jang</a></li>
+        <!-- Optional: list your phone number; consider privacy before publishing on a public website. -->
+        <!-- <li>Mobile: +82-10-5601-9547</li> -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Boa Jang. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
