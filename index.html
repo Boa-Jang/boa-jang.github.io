@@ -57,15 +57,14 @@
   <nav class="topbar">
     <div class="container">
       <div class="brand">Boa Jang</div>
+      <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</button>
       <div class="menu">
         <a href="#about">Home</a>
         <a href="#publications">Publications</a>
-        <a href="#awards">Awards & Honors</a>
         <a href="#presentations">Activities</a>
-        <a href="#teaching">Invited Talk</a>
-      </div>
-      <div class="right">
-        <span class="icon">🔍</span>
+        <a href="#awards">Awards & Honors</a>
+        <a href="#certifications">Certifications & Patents</a>
+        <a href="#teaching">Teaching</a>
       </div>
     </div>
   </nav>
@@ -188,6 +187,17 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggleBtn && toggleBtn.addEventListener('click', () => menu.classList.toggle('open'));
+
+    // Add shadow when scrolled
+    const topbar = document.querySelector('.topbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 4) topbar.classList.add('scrolled');
+      else topbar.classList.remove('scrolled');
+    });
+ </script>
 </body>
 </html>
