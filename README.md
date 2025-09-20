@@ -1,1 +1,1 @@
-# jang-boa-github.io
+# jang-boa.github.io
