@@ -607,7 +607,7 @@ a.venue-tag:hover {
    Institution on the left, location flush right — mirrors the CV's
    \entryhead{}{} layout. */
 .entry {
-  margin: 0 0 16px;
+  margin: 0 0 26px;
 }
 
 .entry:last-child {
@@ -619,7 +619,12 @@ a.venue-tag:hover {
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+/* Advisors / lab lines sit closer to their institution than to the next entry */
+.entry .muted {
+  line-height: 1.75;
 }
 
 .entry-place {
