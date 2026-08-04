@@ -603,6 +603,103 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
+/* ===== Media =====
+   Used by the commented-out #media section in index.html. Kept live so the
+   section renders correctly the moment it is uncommented. */
+/* Grid, not flex: a trailing row of 1-2 cards keeps the same width as a
+   full row instead of stretching to fill the space. */
+.media-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.media-item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: var(--fg);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+a.media-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.media-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-alt);
+}
+
+/* Outlet wordmark stands in when no article image is available */
+.media-thumb--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.media-thumb--text span {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+/* Video embeds fill the same 16:9 box as article thumbnails */
+.media-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-alt);
+}
+
+.media-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Grows to fill the card so the source line always sits at the bottom,
+   keeping every card's footer aligned despite headlines of different lengths. */
+.media-text {
+  padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-text h3 {
+  font-size: 14.5px;
+  font-weight: 650;
+  line-height: 1.45;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+}
+
+.media-source {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: auto 0 0;
+}
+
 /* ===== Publications: responsive ===== */
 
 /* Between the mobile stack and full width, shrink the thumb rather than
@@ -635,6 +732,16 @@ a.venue-tag:hover {
     flex: none;
     align-self: flex-start;
     padding: 3px 12px;
+  }
+
+  .media-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 940px) {
+  .media-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
