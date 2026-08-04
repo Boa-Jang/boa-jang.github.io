@@ -603,25 +603,6 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
-/* ===== Research interest tags ===== */
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.interest-tag {
-  display: inline-block;
-  padding: 5px 13px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  background: var(--accent-soft);
-  color: var(--accent-hover);
-  border: 1px solid #dbeafe;
-}
-
 /* ===== Media =====
    Used by the commented-out #media section in index.html. Kept live so the
    section renders correctly the moment it is uncommented. */
@@ -712,7 +693,9 @@ a.media-item:hover {
   background: var(--bg-alt);
 }
 
-/* Outlet wordmark stands in when no article image is available */
+/* Outlet wordmark stands in when an article has no usable image.
+   Unused at present — every card has a real thumbnail — but kept so a
+   future entry without one still renders cleanly. */
 .media-thumb--text {
   display: flex;
   align-items: center;
