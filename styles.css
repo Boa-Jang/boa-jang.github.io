@@ -603,6 +603,31 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
+/* ===== Experience / Education entries =====
+   Institution on the left, location flush right — mirrors the CV's
+   \entryhead{}{} layout. */
+.entry {
+  margin: 0 0 16px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.entry-place {
+  flex-shrink: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
 /* ===== Media =====
    Used by the commented-out #media section in index.html. Kept live so the
    section renders correctly the moment it is uncommented. */
