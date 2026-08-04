@@ -5,18 +5,20 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 
+function setMenu(open) {
+  menuToggle.classList.toggle('active', open);
+  menu.classList.toggle('active', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+}
+
 menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  menu.classList.toggle('active');
+  setMenu(!menu.classList.contains('active'));
 });
 
 // Close mobile menu when clicking on a link
 const menuLinks = document.querySelectorAll('.menu a');
 menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    menuToggle.classList.remove('active');
-    menu.classList.remove('active');
-  });
+  link.addEventListener('click', () => setMenu(false));
 });
 
 // Active menu highlighting based on scroll position
@@ -73,8 +75,7 @@ document.addEventListener('click', (e) => {
   const isClickOnToggle = menuToggle.contains(e.target);
   
   if (!isClickInsideMenu && !isClickOnToggle && menu.classList.contains('active')) {
-    menuToggle.classList.remove('active');
-    menu.classList.remove('active');
+    setMenu(false);
   }
 });
 
@@ -91,18 +92,10 @@ menu.addEventListener('transitionend', () => {
   }
 });
 
-// Add keyboard navigation support
-menuToggle.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    menuToggle.click();
-  }
-});
-
 // Escape key to close mobile menu
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && menu.classList.contains('active')) {
-    menuToggle.classList.remove('active');
-    menu.classList.remove('active');
+    setMenu(false);
+    menuToggle.focus();
   }
 });

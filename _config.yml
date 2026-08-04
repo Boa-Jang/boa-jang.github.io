@@ -1,1 +1,7 @@
-theme: jekyll-theme-cayman
+# This site is hand-authored HTML/CSS, not a themed Jekyll site.
+# No theme is set, so Jekyll serves index.html exactly as written.
+title: Boa Jang
+description: Ph.D. Candidate in Bioengineering, Seoul National University
+
+exclude:
+  - README.md

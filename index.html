@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boa Jang | Portfolio</title>
+  <meta name="description" content="Boa Jang — Ph.D. Candidate in Bioengineering at Seoul National University. Clinically grounded AI for medical imaging, with a focus on retinal and ophthalmic imaging." />
+  <meta name="author" content="Boa Jang" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Boa Jang | Portfolio" />
+  <meta property="og:description" content="Ph.D. Candidate in Bioengineering, Seoul National University. Clinically grounded AI for medical imaging." />
+  <meta property="og:image" content="Headshot_Boa Jang.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,23 +23,25 @@
         <a href="#home" data-section="home">Home</a>
         <a href="#about" data-section="about">About</a>
         <a href="#publications" data-section="publications">Publications</a>
+        <a href="#under-review" data-section="under-review">Under Review</a>
         <a href="#presentations" data-section="presentations">Presentations</a>
         <a href="#awards" data-section="awards">Awards</a>
-        <a href="#certifications" data-section="certifications">Certifications</a>
+        <a href="#certifications" data-section="certifications">Patents</a>
         <a href="#teaching" data-section="teaching">Teaching</a>
       </div>
-      <div class="menu-toggle" id="menuToggle">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="menu">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
   <header id="home">
     <img class="avatar" src="Headshot_Boa Jang.jpg" alt="Profile photo of Boa Jang" />
     <h1>Boa Jang</h1>
-    <p class="subtitle">Bioengineering Ph.D. Student · AI in Medical Imaging</p>
+    <p class="subtitle">Ph.D. Candidate in Bioengineering, Seoul National University</p>
+    <p class="affiliation">Clinically Grounded AI for Medical &amp; Retinal Imaging</p>
     <div class="links">
       <a href="CV_Boa Jang.pdf" target="_blank">📄 CV</a>
       <a href="https://scholar.google.com/citations?user=BOqi4TAAAAAJ&hl" target="_blank">🔗 Google Scholar</a>
@@ -42,11 +52,11 @@
   <main>
     <section id="about">
       <div class="kicker">About</div>
-      <h2>Professional Profile</h2>
+      <h2>Biography</h2>
       <p>
-        Highly motivated and results-driven bioengineering Ph.D. student passionate about the intersection of
-        cutting-edge technology and healthcare. I focus on artificial intelligence for medical images to improve
-        diagnostics and patient outcomes with clinically impactful, real-world solutions.
+        I develop clinically grounded AI methods for medical imaging, with a focus on retinal and ophthalmic
+        imaging. My research spans representation learning, multimodal prediction, image restoration, and
+        clinician-validated decision support, aiming to build reliable AI systems for real-world healthcare.
       </p>
     </section>
 
@@ -56,18 +66,27 @@
           <div class="kicker">Say hello</div>
           <h2>Contact</h2>
           <ul>
-            <li>Email: <a href="mailto:boajang97@gmail.com">boajang97@gmail.com</a>; <a href="mailto:balinda@snu.ac.kr">balinda@snu.ac.kr</a></li>
+            <li>Email: <a href="mailto:balinda@snu.ac.kr">balinda@snu.ac.kr</a>; <a href="mailto:boajang97@gmail.com">boajang97@gmail.com</a></li>
             <li>GitHub: <a href="https://github.com/Jang-Boa" target="_blank" rel="noreferrer">github.com/Jang-Boa</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/boa-jang-93a72918a/" target="_blank">linkedin.com/in/boa-jang</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/boa-jang-93a72918a/" target="_blank" rel="noreferrer">linkedin.com/in/boa-jang</a></li>
           </ul>
+
+          <div class="kicker" style="margin-top:20px">Experience</div>
+          <h2>Research Experience</h2>
+          <p><strong>Seoul National University Hospital (SNUH)</strong><br/>
+            <span class="muted">Machine Learning Researcher · Nov 2021 – Feb 2023</span></p>
+          <p><strong>Korea Institute of Science and Technology (KIST)</strong><br/>
+            <span class="muted">ML Research Intern, Brain Science Institute · Aug 2020 – May 2021</span></p>
+          <p><strong>Peking University</strong><br/>
+            <span class="muted">Undergraduate Research Assistant · Mar 2019 – Jun 2020</span></p>
         </div>
         <div>
           <div class="kicker">Education</div>
           <h2>Education</h2>
-          <p> <strong>Seoul National University, Republic of Korea</strong><br/>
-            <span class="muted">Ph.D. Student in Bioengineering, 2023</span></p>
-          <p> <strong>Peking University, Beijing, China</strong><br/>
-            <span class="muted">B.S. in Psychological & Cognitive Sciences, 2020</span></p>
+          <p><strong>Seoul National University</strong>, Seoul, Korea<br/>
+            <span class="muted">Ph.D. Candidate in Bioengineering · Mar 2023 – Present</span></p>
+          <p><strong>Peking University</strong>, Beijing, China<br/>
+            <span class="muted">B.S. in Psychological &amp; Cognitive Sciences · Sep 2016 – Jul 2020</span></p>
         </div>
       </div>
     </section>
@@ -75,97 +94,353 @@
     <section id="publications">
       <div class="kicker">Research</div>
       <h2>Publications</h2>
-      <ol>
-        <li class="publication-item">
-          <div class="publication-content">
-            <strong>Kim, N.Y.*; Jang, B.*;</strong> Kim, Y.-G. (2023). 
-            <a href="https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.202305-410OC" target="_blank" class="paper-title">
-              Differential Diagnosis of Pleural Effusion using Machine Learning
-            </a>. 
-            <em>Annals of the American Thoracic Society</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://pubmed.ncbi.nlm.nih.gov/37788372/" target="_blank" class="link-btn">
-              <span class="link-icon">🔗</span> Paper
+
+      <div class="pub-year">2026</div>
+
+      <!-- j.8 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j8-oct-speckle-denoising.png" alt="Segmentation-guided diffusion model for retinal OCT speckle reduction" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>Segmentation-Guided Denoising Diffusion Probabilistic Models for Retinal OCT Speckle Noise Reduction with Enhanced Clinical Diagnostic Accuracy</h3>
+          <p class="pub-authors">J.R. Song<sup>†</sup>, <strong>B. Jang<sup>†</sup></strong>, et al.</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag scirep">Scientific Reports</span>
+            <span class="pub-status">(Accepted, in press)</span> 2026
+          </p>
+        </div>
+      </article>
+
+      <!-- j.7 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j7-retinal-representation-learning.png" alt="M-FunFound: clinically grounded retinal representation learning framework" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.nature.com/articles/s41598-026-60067-y" target="_blank" rel="noreferrer">
+              Clinically Grounded Retinal Representation Learning from Minimal Supervision
             </a>
-            <a href="https://doi.org/10.1513/AnnalsATS.202305-410OC" target="_blank" class="link-btn">
-              <span class="link-icon">📄</span> DOI
-            </a>
+          </h3>
+          <p class="pub-authors"><strong>B. Jang</strong>, Y. Ahn, E.K. Choe, C.K. Yoon, J. Choi, H.J. Choi, Y.-G. Kim</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag scirep">Scientific Reports</span> 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41598-026-60067-y" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1038/s41598-026-60067-y" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436169/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
           </div>
+        </div>
+      </article>
+
+      <!-- j.6 — no figure available; icon placeholder -->
+      <article class="pub-item">
+        <div class="pub-thumb pub-thumb--placeholder" data-topic="neuro" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 12c-5 0-8 3-8 7 -4 0-7 3-7 7 0 2 1 4 2 5 -1 1-2 3-2 5 0 4 3 7 7 7 0 4 3 7 8 7"/>
+            <path d="M32 12c5 0 8 3 8 7 4 0 7 3 7 7 0 2-1 4-2 5 1 1 2 3 2 5 0 4-3 7-7 7 0 4-3 7-8 7"/>
+            <path d="M32 12v38"/>
+            <path d="M24 24h5M35 24h5M22 34h7M35 34h7M25 44h5M34 44h5"/>
+          </svg>
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.jkns.or.kr/journal/view.php?doi=10.3340%2Fjkns.2026.0030" target="_blank" rel="noreferrer">
+              From Static Diagnosis to Dynamic Guidance: Evolution of Artificial Intelligence in Pediatric Neuroimaging
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>B. Jang</strong>, Y. Shin, G. Lee, Y.-G. Kim</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag jkns">J Korean Neurosurg Soc</span> 69(3):329–337, 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://www.jkns.or.kr/journal/view.php?doi=10.3340%2Fjkns.2026.0030" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.3340/jkns.2026.0030" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42036142/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- j.5 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j5-oct-biomarkers-treat-extend.png" alt="OCT biomarkers predicting treatment interval in neovascular AMD" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.nature.com/articles/s41598-026-36751-4" target="_blank" rel="noreferrer">
+              OCT Biomarkers as Predictors of Treatment Interval in Neovascular Age-Related Macular Degeneration Treated with Intravitreal Aflibercept Using a Treat-and-Extend Regimen
+            </a>
+          </h3>
+          <p class="pub-authors">J.H. Lee, S.Y. Lee, <strong>B. Jang</strong>, Y.-G. Kim, C.K. Yoon, U.C. Park, K.H. Park, E.K. Lee</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag scirep">Scientific Reports</span> 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41598-026-36751-4" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1038/s41598-026-36751-4" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12909852/" target="_blank" rel="noreferrer"><span class="link-icon">📂</span> Full Text</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- j.4 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j4-amd-recurrence-19experts.png" alt="AI-based prediction of first recurrence in neovascular AMD validated by 19 experts" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.nature.com/articles/s41598-025-34480-8" target="_blank" rel="noreferrer">
+              Artificial Intelligence-Based Prediction of First Recurrence in Neovascular Age-Related Macular Degeneration with Validation by 19 Experts
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>B. Jang<sup>†</sup></strong>, C.H. Lee<sup>†</sup>, et al.</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag scirep">Scientific Reports</span> 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41598-025-34480-8" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1038/s41598-025-34480-8" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41545508/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="pub-year">2025</div>
+
+      <!-- j.3 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j3-autism-home-videos.png" alt="Automated AI-based identification of autism spectrum disorder from home videos" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.nature.com/articles/s41746-025-01993-5" target="_blank" rel="noreferrer">
+              Automated AI-Based Identification of Autism Spectrum Disorder from Home Videos
+            </a>
+          </h3>
+          <p class="pub-authors">D.Y. Kim, R. Do, …, <strong>B. Jang</strong>, et al.</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag npjdm">npj Digital Medicine</span> 8:607, 2025
+          </p>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41746-025-01993-5" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1038/s41746-025-01993-5" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41073602/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="pub-year">2023</div>
+
+      <!-- j.2 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j2-pleural-effusion.jpeg" alt="Differential diagnosis of pleural effusion using machine learning" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.202305-410OC" target="_blank" rel="noreferrer">
+              Differential Diagnosis of Pleural Effusion Using Machine Learning
+            </a>
+          </h3>
+          <p class="pub-authors">N.Y. Kim<sup>†</sup>, <strong>B. Jang<sup>†</sup></strong>, et al.</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag annalsats">Annals ATS</span> 2023
+          </p>
+          <div class="pub-links">
+            <a href="https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.202305-410OC" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1513/AnnalsATS.202305-410OC" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37788372/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- j.1 -->
+      <article class="pub-item">
+        <div class="pub-thumb">
+          <img src="images/j1-amd-recurrence-preliminary.png" alt="Predicting first recurrence in neovascular AMD using deep learning" loading="lazy" />
+        </div>
+        <div class="pub-details">
+          <h3>
+            <a href="https://bmcophthalmol.biomedcentral.com/articles/10.1186/s12886-023-03229-0" target="_blank" rel="noreferrer">
+              Preliminary Analysis of Predicting the First Recurrence in Patients with Neovascular Age-Related Macular Degeneration Using Deep Learning
+            </a>
+          </h3>
+          <p class="pub-authors"><strong>B. Jang<sup>†</sup></strong>, S.Y. Lee<sup>†</sup>, et al.</p>
+          <p class="pub-venue-text">
+            <span class="venue-tag bmc">BMC Ophthalmology</span> 2023
+          </p>
+          <div class="pub-links">
+            <a href="https://bmcophthalmol.biomedcentral.com/articles/10.1186/s12886-023-03229-0" target="_blank" rel="noreferrer"><span class="link-icon">🔗</span> Paper</a>
+            <a href="https://doi.org/10.1186/s12886-023-03229-0" target="_blank" rel="noreferrer"><span class="link-icon">📄</span> DOI</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38062449/" target="_blank" rel="noreferrer"><span class="link-icon">🧬</span> PubMed</a>
+          </div>
+        </div>
+      </article>
+
+      <p class="muted"><sup>†</sup> These authors contributed equally.</p>
+    </section>
+
+    <section id="under-review">
+      <div class="kicker">In Progress</div>
+      <h2>Under Review</h2>
+      <ul class="review-list">
+        <li>
+          <span class="review-title">Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures</span>
+          <span class="venue-tag aaai">AAAI 2027</span> <span class="pub-status">(under review)</span>
         </li>
-        <li class="publication-item">
-          <div class="publication-content">
-            <strong>Jang, B.*;</strong> …; Kim, Y.-G. (2023). 
-            <a href="https://bmcophthalmol.biomedcentral.com/articles/10.1186/s12886-023-03229-0" target="_blank" class="paper-title">
-              Preliminary analysis of predicting the first recurrence in patients with neovascular age‑related macular degeneration using deep learning
-            </a>. 
-            <em>BMC Ophthalmology</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://pubmed.ncbi.nlm.nih.gov/38062449/" target="_blank" class="link-btn">
-              <span class="link-icon">🔗</span> Paper
-            </a>
-            <a href="https://doi.org/10.1186/s12886-023-03229-0" target="_blank" class="link-btn">
-              <span class="link-icon">📄</span> DOI
-            </a>
-            <!-- <a href="https://github.com/Jang-Boa/amd-recurrence-prediction" target="_blank" class="link-btn">
-              <span class="link-icon">💻</span> Code
-            </a> -->
-          </div>
+        <li>
+          <span class="review-title">Retinal Age Gap as a Biomarker of Biological Aging Reflected by Socioeconomic Status and Lifestyle Behaviors</span>
+          <span class="venue-tag other">GeroScience</span> <span class="pub-status">(in revision)</span>
         </li>
-      </ol>
-      <p class="muted">(* equal contribution)</p>
+        <li>
+          <span class="review-title">Prediction of Postoperative Intracerebral Hemorrhage Following Brain Biopsy Using Integrated Statistical and Machine Learning Analyses</span>
+          <span class="venue-tag scirep">Scientific Reports</span> <span class="pub-status">(in revision)</span>
+        </li>
+        <li>
+          <span class="review-title">Integrating RNFL and Fundus Photographs for Differentiation of Glaucomatous and Non-Glaucomatous Optic Neuropathy Using Deep Learning</span>
+          <span class="venue-tag scirep">Scientific Reports</span> <span class="pub-status">(in revision)</span>
+        </li>
+        <li>
+          <span class="review-title">Age- and Sex-Specific Autism Screening Using Machine Learning Reduction and Conversational Agent Integration</span>
+          <span class="venue-tag other">PLOS Digital Health</span> <span class="pub-status">(submitted)</span>
+        </li>
+      </ul>
     </section>
 
     <section id="presentations">
       <div class="kicker">Talks</div>
       <h2>Presentations</h2>
-      <ul>
-        <li><strong>Poster</strong> — Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability. KOSAMI 2025, Seoul, Korea.</li>
-        <li><strong>Oral</strong> — Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability. <a href="https://sites.google.com/view/amai2025/home">MICCAI AMAI 2025</a>, Dajeon, Korea.  <em>Best Abstract Award - Honorable Mention</em></li>
-        <li><strong>Oral</strong> — Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability. KOSMI Spring 2025, Busan, Korea. <em>Best Paper Award</em>.</li>
-        <li><strong>Oral</strong> — Self‑Supervised Learning for Mesangial Proliferation Prediction in Digital Pathology. KSN 2025, Coex, Seoul, Korea.</li>
-        <li><strong>Oral</strong> — Foundation Models in Healthcare: Development, Necessity and Implementation Strategies. <a href="https://app.himssconference.com/event/himss-2025/planning/UGxhbm5pbmdfMjExNzIxMA==">HIMSS 2025</a>, Las Vegas, NV.</li>
-        <li><strong>Oral</strong> — The Impact of AI‑Assistance on Predicting Recurrence in Neovascular AMD for Ophthalmologists. KOSMI Fall 2023, Bundang, Korea. <em>Best Paper Award</em>.</li>
-        <li><strong>Poster</strong> — Development and Validation of Pretrained Model for Fundoscopy‑Specific using Large‑Scale Images. OMIA‑X @ MICCAI 2023, Vancouver, Canada.</li>
-        <li><strong>Poster</strong> — Predicting the First Recurrence in Patients with Neovascular AMD Using Deep Learning. ASRS 2023, Seattle, USA. <em>Poster Award Winner</em>.</li>
-        <li><strong>Oral</strong> — Development and Validation of Pretrained Model for Fundoscopy‑Specific using Large‑Scale Images. KOSMI Spring 2023, Daegu, Korea. <em>Best Paper Award</em>.</li>
+
+      <div class="pub-year">2026</div>
+      <ul class="talk-list">
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Structure-Preserving Test-Time Adaptation for Cross-Modality Retinal Vessel Segmentation</span>
+            <span class="talk-venue">2026 Spring Conference of the Korean Society of Medical Informatics (KoSMI), Cheongju, Korea</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="pub-year">2025</div>
+      <ul class="talk-list">
+        <li>
+          <span class="talk-type poster">Poster</span>
+          <div class="talk-body">
+            <span class="talk-title">Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability</span>
+            <span class="talk-venue">2025 Annual Conference of the Korea Society of Artificial Intelligence in Medicine (KoSAIM), Seoul, Korea</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability</span>
+            <span class="talk-venue"><a href="https://sites.google.com/view/amai2025/home" target="_blank" rel="noreferrer">MICCAI 2025 AMAI Workshop</a>, Daejeon, Korea</span>
+            <span class="talk-award">🏅 Best Abstract Award – Honorable Mention</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Assessment of Systemic Health Using Retinal Age Gap: Development of a Predictive Model and Clinical Applicability</span>
+            <span class="talk-venue">2025 Spring Conference of the Korean Society of Medical Informatics (KoSMI), Busan, Korea</span>
+            <span class="talk-award">🏅 Best Paper Award</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Self-Supervised Learning for Mesangial Proliferation Prediction in Digital Pathology</span>
+            <span class="talk-venue">The 45th Annual Meeting of the Korean Society of Nephrology (KSN 2025), Seoul, Korea</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Foundation Models in Healthcare: Development, Necessity and Implementation Strategies</span>
+            <span class="talk-venue"><a href="https://app.himssconference.com/event/himss-2025/planning/UGxhbm5pbmdfMjExNzIxMA==" target="_blank" rel="noreferrer">2025 HIMSS Global Health Conference &amp; Exhibition</a>, Las Vegas, NV, USA</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="pub-year">2023</div>
+      <ul class="talk-list">
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">The Impact of AI-Assistance on Predicting Recurrence in Neovascular Age-Related Macular Degeneration for Ophthalmologists</span>
+            <span class="talk-venue">2023 Fall Conference of the Korean Society of Medical Informatics (KoSMI), Bundang, Korea</span>
+            <span class="talk-award">🏅 Best Paper Award</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type poster">Poster</span>
+          <div class="talk-body">
+            <span class="talk-title">Development and Validation of Pretrained Model for Fundoscopy-Specific using Large-Scale Images</span>
+            <span class="talk-venue">10th Workshop on Ophthalmic Medical Image Analysis (OMIA-X) @ MICCAI 2023, Vancouver, Canada</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type poster">Poster</span>
+          <div class="talk-body">
+            <span class="talk-title">Predicting the First Recurrence in Patients with Neovascular AMD Using Deep Learning</span>
+            <span class="talk-venue">2023 American Society of Retina Specialists (ASRS), Seattle, WA, USA</span>
+            <span class="talk-award">🏅 Poster Award Winner</span>
+          </div>
+        </li>
+        <li>
+          <span class="talk-type oral">Oral</span>
+          <div class="talk-body">
+            <span class="talk-title">Development and Validation of Pretrained Model for Fundoscopy-Specific using Large-Scale Images</span>
+            <span class="talk-venue">2023 Spring Conference of the Korean Society of Medical Informatics (KoSMI), Daegu, Korea</span>
+            <span class="talk-award">🏅 Best Paper Award</span>
+          </div>
+        </li>
       </ul>
     </section>
 
     <section id="awards">
       <div class="kicker">Recognition</div>
-      <h2>Awards & Honors</h2>
-      <ul>
-        <li>KOSMI Spring Conference Best Paper Award — Jun 2025</li>
-        <li>HeLP Challenge 2023 — Theme 6, 2nd Place — Dec 2023</li>
-        <li>HeLP Challenge 2023 — Theme 4, 2nd Place — Dec 2023</li>
-        <li>KOSMI Autumn Conference Best Paper Award — Nov 2023</li>
-        <li>Digital Pathology AI Hackathon (CODiPAI) — 3rd Place — Oct 2023</li>
-        <li>ASRS Poster Award Winner — Jul 2023</li>
-        <li>KOSMI Spring Conference Best Paper Award — Jun 2023</li>
-        <li>SNUAIMED Excellence Scholarship — Aug 2023</li>
+      <h2>Awards &amp; Honors</h2>
+      <ul class="award-list">
+        <li><span class="award-date">Nov 2025</span> AI Seoul Tech Graduate Scholarship, Seoul Future Talent Foundation</li>
+        <li><span class="award-date">Nov 2024</span> Hana Bank President's Award, 2024 Digital Wellness Competition</li>
+        <li><span class="award-date">Dec 2023</span> 2nd Place, Healthcare AI Learning Platform Challenge 2023, Themes 4 &amp; 6</li>
+        <li><span class="award-date">Oct 2023</span> 3rd Place, Digital Pathology AI Hackathon, CODiPAI Challenge</li>
+        <li><span class="award-date">2023, 2024</span> SNUAIMED Excellence Scholarship</li>
       </ul>
     </section>
 
     <section id="certifications">
       <div class="kicker">Credentials</div>
-      <h2>Certifications & Patents</h2>
-      <ul>
-        <li>NVIDIA DLI Instructor‑Led Workshop: Fundamentals of Deep Learning — Aug 2023</li>
-        <li>Patent (KR): Method and system for predicting information related to abdominal surgery from medical imaging data.</li>
+      <h2>Patents</h2>
+      <ul class="award-list">
+        <li>
+          <span class="award-date">Jun 2026</span>
+          Controllable Normal-to-Disease Fundus Translation via Factorial Guidance.
+          <span class="muted">Korea Patent Application No. 10-2026-0119988, filed Jun 30, 2026.</span>
+        </li>
+        <li>
+          <span class="award-date">Apr 2026</span>
+          Method and System for Predicting Information Related to Abdominal Surgery from Medical Image Data.
+          <span class="muted">Korea Patent No. 10-2953173, registered Apr 13, 2026; filed Dec 26, 2023.</span>
+        </li>
       </ul>
     </section>
 
     <section id="teaching">
-      <div class="kicker">Teaching & Student Ambassadors</div>
-      <h2>Teaching Experience</h2>
-      <ul>
-        <li>KCD 2025 — Oct 16–18, 2025</li>
-        <li>MICCAI AMAI 2025 — Sep 23, 2025 (Student Ambassadors)</li>
-        <li>Healthcare AI Research Training Program — Teaching Assistant — Feb 26 – May 28, 2025</li>
-        <li>AI Healthcare Training Program — Oct 12, 2024</li>
-        <li>NVIDIA HCLS Summit Korea — MONAI Bootcamp TA — May 3, 2022</li>
+      <div class="kicker">Mentoring</div>
+      <h2>Teaching &amp; Mentoring</h2>
+      <ul class="award-list">
+        <li><span class="award-date">Oct 2025</span> Teaching Assistant, Korea Clinical Datathon (KCD) 2025</li>
+        <li><span class="award-date">Sep 2025</span> Student Ambassador, MICCAI 2025 AMAI Workshop</li>
+        <li><span class="award-date">2024, 2025</span> Teaching Assistant, Clinical and Healthcare AI Training Programs</li>
+        <li><span class="award-date">May 2022</span> Teaching Assistant, NVIDIA MONAI Bootcamp, HCLS Summit Korea 2022</li>
       </ul>
     </section>
   </main>
