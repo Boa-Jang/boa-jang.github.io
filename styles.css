@@ -4,9 +4,13 @@
   --muted: #6b7280;
   --accent: #3b82f6;
   --accent-hover: #2563eb;
+  --accent-soft: #eff6ff;
   --border: #e5e7eb;
   --chip: #f3f4f6;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --bg-alt: #f6f7fb;
+  --radius: 16px;
+  --shadow: 0 2px 12px rgba(31, 41, 55, 0.06);
+  --shadow-md: 0 14px 34px rgba(31, 41, 55, 0.12);
 }
 
 * { 
@@ -292,27 +296,27 @@ ol li {
   display: flex;
   gap: 20px;
   align-items: center;
-  padding: 18px;
+  padding: 20px;
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   margin-bottom: 16px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .pub-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
 /* Uniform thumbnail box — every image renders at the same size */
 .pub-thumb {
-  flex: 0 0 300px;
-  width: 300px;
+  flex: 0 0 360px;
+  width: 360px;
   aspect-ratio: 16 / 10;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  background: #f8fafc;
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -394,6 +398,18 @@ ol li {
   flex-wrap: wrap;
 }
 
+/* Full journal name + volume, kept as one unit so the flex gap can never
+   strand the comma away from the title. */
+.pub-venue-full {
+  color: var(--muted);
+}
+
+.pub-venue-text em {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 400;
+}
+
 .pub-status {
   font-style: italic;
   color: var(--accent);
@@ -410,6 +426,18 @@ ol li {
   white-space: nowrap;
   background: #e2e8f0;
   color: #475569;
+}
+
+/* A badge may itself link to the journal/conference site */
+a.venue-tag {
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+a.venue-tag:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .venue-tag.scirep    { background: #e0f2fe; color: #075985; }
@@ -544,42 +572,17 @@ ol li {
   color: #b45309;
 }
 
-/* ===== Awards / Patents / Teaching ===== */
-.award-list {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-}
-
-.award-list li {
-  display: flex;
-  gap: 14px;
-  align-items: baseline;
-  padding: 11px 0;
-  margin: 0;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  font-size: 14.5px;
-}
-
-.award-list li:last-child {
-  border-bottom: 0;
-}
-
-.award-date {
-  flex: 0 0 96px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.award-list .muted {
-  flex-basis: 100%;
-  margin-left: 110px;
-  font-size: 12.5px;
-}
-
 /* ===== Publications: responsive ===== */
+
+/* Between the mobile stack and full width, shrink the thumb rather than
+   squeezing the text column to nothing. */
+@media (min-width: 769px) and (max-width: 940px) {
+  .pub-thumb {
+    flex-basis: 280px;
+    width: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .pub-item {
     flex-direction: column;
@@ -601,18 +604,6 @@ ol li {
     flex: none;
     align-self: flex-start;
     padding: 3px 12px;
-  }
-
-  .award-list li {
-    gap: 4px;
-  }
-
-  .award-date {
-    flex-basis: 100%;
-  }
-
-  .award-list .muted {
-    margin-left: 0;
   }
 }
 
