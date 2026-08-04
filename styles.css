@@ -210,28 +210,40 @@ h1 {
 }
 
 .hero-links a {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.30);
+  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.25);
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-links svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   display: block;
+  flex-shrink: 0;
+}
+
+/* CV sits in the same row: a pill instead of a circle, same 32px height */
+.hero-links a.cv-link {
+  width: auto;
+  gap: 6px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .hero-links a:hover {
   background: var(--accent-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.40);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.35);
   text-decoration: none;
 }
 
@@ -240,30 +252,6 @@ h1 {
   outline-offset: 3px;
 }
 
-.links {
-  margin-top: 14px;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.links a { 
-  background: white; 
-  padding: 8px 16px; 
-  border-radius: 8px; 
-  font-size: 13px;
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: all 0.2s ease;
-}
-
-.links a:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-decoration: none;
-}
 
 main { 
   max-width: 1000px; 
