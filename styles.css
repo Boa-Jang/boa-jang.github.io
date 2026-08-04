@@ -603,21 +603,90 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
+/* ===== Research interest tags ===== */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.interest-tag {
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  border: 1px solid #dbeafe;
+}
+
 /* ===== Media =====
    Used by the commented-out #media section in index.html. Kept live so the
    section renders correctly the moment it is uncommented. */
-/* Grid, not flex: a trailing row of 1-2 cards keeps the same width as a
-   full row instead of stretching to fill the space. */
+/* Wrapper exists only to host the right-edge fade that hints at overflow */
+.media-scroller {
+  position: relative;
+}
+
+.media-scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4px;
+  bottom: 14px;
+  width: 48px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 85%);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+/* Hidden once the row is scrolled to the end */
+.media-scroller.at-end::after {
+  opacity: 0;
+}
+
+/* Single row that scrolls horizontally — cards keep a fixed width and
+   overflow sideways instead of wrapping onto ragged extra rows. */
 .media-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 16px;
   align-items: stretch;
   margin-top: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  /* room for the scrollbar so it never overlaps the cards */
+  padding: 4px 4px 14px;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.media-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.media-row::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+  border-radius: 999px;
+}
+
+.media-row::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.media-row::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 .media-item {
-  min-width: 0;
+  flex: 0 0 300px;
+  width: 300px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -685,6 +754,7 @@ a.media-item:hover {
   flex-direction: column;
 }
 
+/* Clamped to 3 lines so every card in the row is the same height */
 .media-text h3 {
   font-size: 14.5px;
   font-weight: 650;
@@ -692,6 +762,11 @@ a.media-item:hover {
   margin: 0 0 8px;
   letter-spacing: -0.01em;
   word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .media-source {
@@ -734,14 +809,10 @@ a.media-item:hover {
     padding: 3px 12px;
   }
 
-  .media-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 940px) {
-  .media-row {
-    grid-template-columns: repeat(2, 1fr);
+  /* Slightly narrower cards so the next one peeks in, hinting at the scroll */
+  .media-item {
+    flex-basis: 270px;
+    width: 270px;
   }
 }
 

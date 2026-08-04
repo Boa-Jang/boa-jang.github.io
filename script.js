@@ -92,6 +92,22 @@ menu.addEventListener('transitionend', () => {
   }
 });
 
+// Hide the media row's edge fade once it is scrolled to the end
+const mediaRow = document.querySelector('.media-row');
+const mediaScroller = document.querySelector('.media-scroller');
+
+if (mediaRow && mediaScroller) {
+  const updateMediaFade = () => {
+    const atEnd = mediaRow.scrollLeft + mediaRow.clientWidth >= mediaRow.scrollWidth - 2;
+    const noOverflow = mediaRow.scrollWidth <= mediaRow.clientWidth + 2;
+    mediaScroller.classList.toggle('at-end', atEnd || noOverflow);
+  };
+
+  mediaRow.addEventListener('scroll', updateMediaFade, { passive: true });
+  window.addEventListener('resize', updateMediaFade);
+  updateMediaFade();
+}
+
 // Escape key to close mobile menu
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && menu.classList.contains('active')) {
