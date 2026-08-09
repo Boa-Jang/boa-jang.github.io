@@ -603,6 +603,59 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
+/* ===== Competitions & challenges ===== */
+.comp-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.comp-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 13px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.comp-list li:last-child {
+  border-bottom: 0;
+}
+
+.comp-rank {
+  flex: 0 0 88px;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  background: #fef3c7;
+  color: #92400e;
+  margin-top: 2px;
+}
+
+.comp-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.comp-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.comp-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 /* ===== Experience / Education entries =====
    Institution on the left, location flush right — mirrors the CV's
    \entryhead{}{} layout. */
@@ -817,6 +870,17 @@ a.media-item:hover {
   }
 
   .talk-type {
+    flex: none;
+    align-self: flex-start;
+    padding: 3px 12px;
+  }
+
+  .comp-list li {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .comp-rank {
     flex: none;
     align-self: flex-start;
     padding: 3px 12px;
