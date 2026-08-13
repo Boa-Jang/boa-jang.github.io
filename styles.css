@@ -603,6 +603,13 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
+/* Opening line of the biography — carries the thesis, so set slightly larger */
+.bio-lead {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
 /* ===== Competitions & challenges ===== */
 .comp-list {
   list-style: none;
