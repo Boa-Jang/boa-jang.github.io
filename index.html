@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boa Jang | Portfolio</title>
-  <meta name="description" content="Boa Jang — Ph.D. Candidate in Bioengineering at Seoul National University. Clinically grounded AI for medical imaging, with a focus on retinal and ophthalmic imaging." />
+  <meta name="description" content="Boa Jang — Ph.D. Candidate in Bioengineering at Seoul National University. Oculomics and retinal imaging biomarkers for systemic health and disease monitoring." />
   <meta name="author" content="Boa Jang" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Boa Jang | Portfolio" />
-  <meta property="og:description" content="Ph.D. Candidate in Bioengineering, Seoul National University. Clinically grounded AI for medical imaging." />
+  <meta property="og:description" content="Oculomics · Retinal Imaging Biomarkers · Longitudinal Biomarkers — Ph.D. Candidate in Bioengineering, Seoul National University." />
   <meta property="og:image" content="Headshot_Boa Jang.jpg" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -22,6 +22,8 @@
       <div class="menu" id="menu">
         <a href="#home" data-section="home">Home</a>
         <a href="#about" data-section="about">About</a>
+        <a href="#research" data-section="research">Research</a>
+        <a href="#experience" data-section="experience">Experience</a>
         <a href="#publications" data-section="publications">Publications</a>
         <a href="#presentations" data-section="presentations">Presentations</a>
         <a href="#under-review" data-section="under-review">In Progress</a>
@@ -40,7 +42,8 @@
     <img class="avatar" src="Headshot_Boa Jang.jpg" alt="Profile photo of Boa Jang" />
     <h1>Boa Jang</h1>
     <p class="subtitle">Ph.D. Candidate in Bioengineering, Seoul National University</p>
-    <p class="affiliation">Clinically Grounded AI for Medical Imaging</p>
+    <p class="affiliation">Oculomics · Retinal Imaging Biomarkers · Longitudinal Biomarkers</p>
+    <p class="hero-summary">I study how retinal images can be used as reliable biomarkers of systemic health and disease progression.</p>
     <div class="hero-links">
       <a href="mailto:boajang97@gmail.com" title="Email" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -75,58 +78,119 @@
     <section id="about">
       <div class="kicker">About</div>
       <h2>Biography</h2>
-      <p class="bio-lead">
-        I develop robust and generalizable deep learning methods for medical imaging, in close collaboration
-        with clinicians.
-      </p>
       <p>
-        I am a Ph.D. candidate in the Interdisciplinary Program in Bioengineering at Seoul National University,
-        working with Seoul National University Hospital, advised by
-        Prof. <a href="mailto:jinchoi@snu.ac.kr">Jin-Wook Choi</a> and
-        Prof. <a href="mailto:younggon2.kim@gmail.com">Young-Gon Kim</a>. My research interests include
-        domain adaptation and generalization, multimodal medical AI, generative modeling for clinical imaging,
-        and imaging biomarkers. My goal is to build medical AI that remains reliable across devices, hospitals,
-        and populations — and creates real impact in clinical care.
+        I study retinal imaging biomarkers for systemic health and disease monitoring. My research focuses on
+        making these biomarkers reliable across imaging devices and over time. I use retinal representation
+        learning, test-time adaptation, and longitudinal clinical data to learn, validate, and track these
+        signals. Since 2021, I have worked closely with clinical teams at
+        <a href="https://sites.google.com/view/medicalvisionlab" target="_blank" rel="noreferrer">Seoul National University Hospital</a>,
+        with research spanning ophthalmic imaging, digital pathology, radiologic imaging, and clinical data.
       </p>
+
+      <div class="interests">
+        <div class="interests-label">Research Interests</div>
+        <p class="interests-list">
+          Oculomics · Retinal Imaging Biomarkers · Retinal Aging · Retinal Vessel Analysis ·
+          Cross-device Robustness · Longitudinal Modeling
+        </p>
+      </div>
     </section>
 
-    <section id="background">
-      <div class="grid">
-        <div>
-          <div class="kicker">Experience</div>
-          <h2>Research Experience</h2>
-          <div class="entry">
-            <div class="entry-head">
-              <strong>Seoul National University Hospital (SNUH)</strong>
-            </div>
-            <span class="muted">Medical AI Researcher, <a href="https://sites.google.com/view/medicalvisionlab" target="_blank" rel="noreferrer">Medical Vision Lab</a> · Nov 2021 – Feb 2023</span>
-          </div>
-          <div class="entry">
-            <div class="entry-head">
-              <strong>Korea Institute of Science and Technology (KIST)</strong>
-            </div>
-            <span class="muted">Research Intern, Brain Science Institute · Aug 2020 – May 2021</span>
-          </div>
+    <section id="research">
+      <div class="kicker">Research</div>
+      <h2>Research Overview</h2>
+      <div class="research-grid">
+
+        <article class="research-card">
+          <div class="research-stage">Learn</div>
+          <h3>M-FunFound</h3>
+          <p>Learning retinal representations from routine clinical labels.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="research-stage">Measure</div>
+          <h3>Retinal Age Gap</h3>
+          <p>Measuring biological and systemic health signals from fundus images.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="research-stage">Stabilize</div>
+          <h3>SGP-TTA</h3>
+          <p>Keeping retinal vessel measurements consistent across devices and modalities.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="research-stage">Track</div>
+          <h3>Longitudinal Oculomics</h3>
+          <p>Tracking retinal biomarker changes over time.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="kicker">Experience</div>
+      <h2>Research Experience</h2>
+
+      <div class="entry entry--logo">
+        <img class="entry-logo" src="images/snuh_logo.jpg" alt="Seoul National University Hospital logo" loading="lazy" />
+        <div class="entry-body">
+        <div class="entry-head">
+          <strong>Seoul National University Hospital</strong>
         </div>
-        <div>
-          <div class="kicker">Education</div>
-          <h2>Education</h2>
-          <div class="entry">
-            <div class="entry-head">
-              <strong>Seoul National University</strong>
-              <span class="entry-place">Seoul, Korea</span>
-            </div>
-            <span class="muted">Ph.D. Candidate in Bioengineering · Mar 2023 – Present</span><br/>
-            <span class="muted">Advisors: Prof. <a href="mailto:jinchoi@snu.ac.kr">Jin-Wook Choi</a>, Prof. <a href="mailto:younggon2.kim@gmail.com">Young-Gon Kim</a></span><br/>
-            <span class="muted">Lab: <a href="https://sites.google.com/view/medicalvisionlab" target="_blank" rel="noreferrer">Medical Vision Lab</a></span>
+        <div class="entry-role">
+          Medical AI Researcher, 2021–2023 · Ph.D. Research Collaborator, 2023–Present ·
+          <a href="https://sites.google.com/view/medicalvisionlab" target="_blank" rel="noreferrer">Medical Vision Lab</a>
+        </div>
+        <p class="entry-desc">
+          Developing AI for ophthalmic imaging in close collaboration with clinicians, from nAMD prognosis
+          to retinal foundation models and imaging biomarkers.
+        </p>
+        </div>
+      </div>
+
+      <div class="entry entry--logo">
+        <img class="entry-logo" src="images/kist_logo.svg" alt="KIST logo" loading="lazy" />
+        <div class="entry-body">
+        <div class="entry-head">
+          <strong>Korea Institute of Science and Technology (KIST), Brain Science Institute</strong>
+        </div>
+        <div class="entry-role">Research Intern, 2020–2021</div>
+        <p class="entry-desc">
+          Studied basal ganglia circuits and motor control through in vivo optogenetics, behavioral
+          experiments, and fluorescence imaging.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="kicker">Education</div>
+      <h2>Education</h2>
+
+      <div class="entry entry--logo">
+        <img class="entry-logo" src="images/snu_logo.PNG" alt="Seoul National University logo" loading="lazy" />
+        <div class="entry-body">
+          <div class="entry-head">
+            <strong>Seoul National University</strong>
+            <span class="entry-place">2023 – Present</span>
           </div>
-          <div class="entry">
-            <div class="entry-head">
-              <strong>Peking University</strong>
-              <span class="entry-place">Beijing, China</span>
-            </div>
-            <span class="muted">B.S. in Psychological &amp; Cognitive Sciences · Sep 2016 – Jul 2020</span>
+          <div class="entry-role">Ph.D. Candidate, Interdisciplinary Program in Bioengineering</div>
+          <p class="entry-desc">
+            Advisors: Prof. <a href="mailto:jinchoi@snu.ac.kr">Jin-Wook Choi</a>,
+            Prof. <a href="mailto:younggon2.kim@gmail.com">Young-Gon Kim</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry entry--logo">
+        <img class="entry-logo" src="images/Peking_University_seal.svg" alt="Peking University logo" loading="lazy" />
+        <div class="entry-body">
+          <div class="entry-head">
+            <strong>Peking University</strong>
+            <span class="entry-place">2016 – 2020</span>
           </div>
+          <div class="entry-role">B.S. in Psychological &amp; Cognitive Sciences</div>
         </div>
       </div>
     </section>

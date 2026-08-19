@@ -200,6 +200,15 @@ h1 {
   font-weight: 600;
 }
 
+/* One-line research statement under the hero's interest line */
+.hero-summary {
+  max-width: 620px;
+  margin: 10px auto 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
 /* Circular social icons — the single place contact details live */
 .hero-links {
   margin-top: 18px;
@@ -603,11 +612,73 @@ a.venue-tag:hover {
   color: #b45309;
 }
 
-/* Opening line of the biography — carries the thesis, so set slightly larger */
-.bio-lead {
-  font-size: 17px;
+/* ===== Research interests ===== */
+.interests {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.interests-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.interests-list {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+/* ===== Research overview cards ===== */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.research-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.research-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Verb that names this stage of the research arc */
+.research-stage {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.research-card h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+
+.research-card p {
+  margin: 0;
+  font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 14px;
+  color: var(--muted);
 }
 
 /* ===== Competitions & challenges ===== */
@@ -667,7 +738,7 @@ a.venue-tag:hover {
    Institution on the left, location flush right — mirrors the CV's
    \entryhead{}{} layout. */
 .entry {
-  margin: 0 0 26px;
+  margin: 0 0 24px;
 }
 
 .entry:last-child {
@@ -685,6 +756,41 @@ a.venue-tag:hover {
 /* Advisors / lab lines sit closer to their institution than to the next entry */
 .entry .muted {
   line-height: 1.75;
+}
+
+/* Entries that carry an institution logo: logo left, text right */
+.entry--logo {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.entry-logo {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Role + dates, directly under the institution */
+.entry-role {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* One-line account of what the work was */
+.entry-desc {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--fg);
 }
 
 .entry-place {
@@ -898,18 +1004,20 @@ a.media-item:hover {
     flex-basis: 270px;
     width: 270px;
   }
-}
 
-.grid { 
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 32px; 
-}
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
 
-@media (min-width: 768px) { 
-  .grid { 
-    grid-template-columns: 1fr 1fr; 
-  } 
+  .entry--logo {
+    gap: 12px;
+  }
+
+  .entry-logo {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .muted { 
