@@ -156,22 +156,37 @@ a:hover {
   }
 }
 
-header { 
-  text-align: center; 
-  padding: 40px 20px 24px; 
+header {
+  text-align: left;
+  padding: 44px 20px 36px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
-.avatar { 
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  border: 4px solid white; 
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12); 
-  display: block; 
-  margin: 0 auto 16px;
+/* Photo left, text right */
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  width: 170px;
+  height: 170px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  display: block;
+  margin: 0;
   transition: transform 0.3s ease;
 }
 
@@ -179,9 +194,9 @@ header {
   transform: scale(1.05);
 }
 
-h1 { 
-  font-size: 28px; 
-  margin: 8px 0 4px; 
+h1 {
+  font-size: 34px;
+  margin: 0 0 6px;
   font-weight: 700;
   letter-spacing: -0.025em;
 }
@@ -202,8 +217,8 @@ h1 {
 
 /* One-line research statement under the hero's interest line */
 .hero-summary {
-  max-width: 620px;
-  margin: 10px auto 0;
+  max-width: 520px;
+  margin: 8px 0 0;
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--muted);
@@ -211,10 +226,10 @@ h1 {
 
 /* Circular social icons — the single place contact details live */
 .hero-links {
-  margin-top: 18px;
+  margin-top: 16px;
   display: flex;
   gap: 14px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -1007,6 +1022,30 @@ a.media-item:hover {
 
   .research-grid {
     grid-template-columns: 1fr;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .hero-summary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-links {
+    justify-content: center;
   }
 
   .entry--logo {
