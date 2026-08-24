@@ -662,6 +662,11 @@ a.venue-tag:hover {
 }
 
 /* ===== Research overview cards ===== */
+.research-intro {
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
