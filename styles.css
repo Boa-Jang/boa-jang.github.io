@@ -178,8 +178,8 @@ header {
 }
 
 .avatar {
-  width: 180px;
-  height: 220px;
+  width: 190px;
+  height: 235px;
   flex: none;
   border-radius: 16px;
   object-fit: cover;
@@ -215,9 +215,8 @@ h1 {
   font-weight: 600;
 }
 
-/* One-line research statement under the hero's interest line */
+/* Biography paragraph under the hero's interest line */
 .hero-summary {
-  max-width: 520px;
   margin: 8px 0 0;
   font-size: 14.5px;
   line-height: 1.6;
