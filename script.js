@@ -21,6 +21,32 @@ menuLinks.forEach(link => {
   link.addEventListener('click', () => setMenu(false));
 });
 
+// Track key single-page navigation and CV PDF interest in GA4
+function trackEvent(eventName, parameters = {}) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, parameters);
+  }
+}
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('navigation_section_click', {
+      section_id: link.dataset.section,
+      section_label: link.textContent.trim()
+    });
+  });
+});
+
+const cvLink = document.querySelector('.cv-link');
+if (cvLink) {
+  cvLink.addEventListener('click', () => {
+    trackEvent('cv_pdf_click', {
+      file_name: 'CV_BoaJang.pdf',
+      link_url: cvLink.getAttribute('href')
+    });
+  });
+}
+
 // Active menu highlighting based on scroll position
 function updateActiveMenu() {
   const sections = document.querySelectorAll('section, header');
